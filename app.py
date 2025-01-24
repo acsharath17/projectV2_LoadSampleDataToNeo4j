@@ -36,7 +36,7 @@ def upload_data(uri, username, password, data):
 
         # Open a session and upload data
         with driver.session() as session:
-            session.write_transaction(upload, data)
+            session.execute_write(upload, data)
 
         return {"status": "success", "message": "Data uploaded successfully!"}
     except Exception as e:
