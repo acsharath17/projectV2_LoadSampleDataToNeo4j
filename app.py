@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Load environment variables
 load_dotenv()
 
-uri = "neo4j+s://your-aura-instance.databases.neo4j.io"
+uri = os.getenv("NEO4J_URI")
 username = os.getenv("NEO4J_USERNAME")
 password = os.getenv("NEO4J_PASSWORD")
 
